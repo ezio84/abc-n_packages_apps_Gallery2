@@ -429,8 +429,8 @@ public class FilterShowActivity extends FragmentActivity implements OnItemClickL
         if (mCurrentEditor.showsActionBar()) {
             setActionBar();
             showActionBar(true);
-        } else {
-            //showActionBar(false);
+        } else if (currentId == EditorCrop.ID) {
+            showActionBar(false);
         }
 
         if (representation.getFilterType() == FilterRepresentation.TYPE_WATERMARK_CATEGORY) {
